@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+erp1.__init__|/home/enes/dev/git/CloudEnterprise/erpsites/erp1/erp1/__init__.py
+erp1.settings|/home/enes/dev/git/CloudEnterprise/erpsites/erp1/erp1/settings.py
+erp1.urls|/home/enes/dev/git/CloudEnterprise/erpsites/erp1/erp1/urls.py
+erp1.wsgi|/home/enes/dev/git/CloudEnterprise/erpsites/erp1/erp1/wsgi.py
+manage|/home/enes/dev/git/CloudEnterprise/erpsites/erp1/manage.py
