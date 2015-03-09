@@ -13,6 +13,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -36,6 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'a_inv',
+    'login',
+    'account',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,8 +63,12 @@ WSGI_APPLICATION = 'erp1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_erp1',
+        'USER': 'root',
+        'PASSWORD': 'passw0rd',
+        'HOST': 'mydbinstance01.ckmfa2v1lcy5.us-west-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
@@ -81,3 +90,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
+
+TEMPLATE_DIRS = (
+                 os.path.join(BASE_DIR, 'templates/'),             
+                 )
